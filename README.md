@@ -1,5 +1,9 @@
 # Build ROS noetic on Ubuntu 22.04
 
+# Packages are now available on launchpad!
+
+Have a look at <https://launchpad.net/~ros-for-jammy> for more details!
+
 ## Install build deps
 
 ```shell
