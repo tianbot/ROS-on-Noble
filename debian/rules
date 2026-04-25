@@ -49,3 +49,9 @@ override_dh_shlibdeps:
 		-l/usr/lib/$(DEB_HOST_MULTIARCH) \
 		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/lib \
 		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/bin
+
+override_dh_gencontrol:
+	if [ -f debian/ros-noetic-desktop-full.substvars ]; then \
+		perl -0pi -e 's{^shlibs:Depends=\K(.*)$$}{join(", ", grep { s{^\s+|\s+\z}{}g; $$_ ne "" && $$_ !~ /^ros-noetic-/ } split /,\s*/, $$1)}me' debian/ros-noetic-desktop-full.substvars; \
+	fi
+	dh_gencontrol

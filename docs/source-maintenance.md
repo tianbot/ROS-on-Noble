@@ -80,7 +80,6 @@ Current expected risk areas:
 - The generated rosdep source list omits the legacy Fuerte `gbpdistro` entry
   because Noetic builds do not need it and current `rosdep update` tries to
   fetch stale platform data for it.
-
 For patched packages, prefer importing the Launchpad source package and keeping
 the `.dsc`, `.orig.tar.*`, and Debian delta together. Do not make a Tianbot
 source upload depend on fetching code from Gitee, GitHub branch archives, or

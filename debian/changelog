@@ -2,6 +2,7 @@ ros (1.16.0-3) noble; urgency=medium
 
   * Build a Noble-specific ROS Noetic bundle package.
   * Keep the traditional ros-noetic-desktop-full binary package name.
+  * Keep the full bundle independent from split ros-noetic runtime packages.
 
  -- Tianbot <dev@tianbot.com>  Sat, 25 Apr 2026 20:00:00 +0800
 
