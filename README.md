@@ -3,9 +3,8 @@
 This repository builds a bundled ROS Noetic desktop tree for Ubuntu 24.04
 Noble. The generated Debian package installs ROS under `/opt/ros/noetic`.
 
-This is a practical bundle package, not the official split ROS Debian package
-set. The package is named `ros-noetic-noble-bundle` to avoid colliding with
-split packages such as `ros-noetic-desktop-full`.
+This is a practical bundle package for Noble. The generated package keeps the
+traditional `ros-noetic-desktop-full` package name.
 
 ## Scope
 
