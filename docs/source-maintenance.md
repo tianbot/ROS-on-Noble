@@ -54,6 +54,31 @@ sources/<source-package>/<version>/tree
 The extracted tree is initialized as a Git repository and tagged with the import
 version.
 
+## Audit External Source Risk
+
+The copied PPA source files are the rebuild baseline. Treat ad hoc upstream
+URLs, rosdistro forks, and archive tarballs as inputs that must be mirrored or
+replaced before they become long-term maintenance dependencies.
+
+Run the external-source audit after changing build instructions, rosinstall
+inputs, or source-import tooling:
+
+```shell
+python scripts/audit_external_sources.py
+```
+
+Current expected risk areas:
+
+- Gitee-hosted rosdistro references in local build instructions.
+- GitHub archive tarballs in `noetic-desktop.rosinstall`.
+- Personal fork tarballs and branch archive tarballs that are less stable than
+  ROS release repositories.
+
+For patched packages, prefer importing the Launchpad source package and keeping
+the `.dsc`, `.orig.tar.*`, and Debian delta together. Do not make a Tianbot
+source upload depend on fetching code from Gitee, GitHub branch archives, or
+other mutable external URLs during the package build.
+
 ## Patch And Upload
 
 Inside the extracted source tree:
@@ -73,5 +98,8 @@ For follow-up patches, increment the Tianbot suffix.
 - Keep every patched package in Git with import tags and changelog entries.
 - Prefer source uploads to the PPA; do not rely on local binary-only `.deb`
   files as the source of truth.
+- Keep imported source tarballs mirrored. A rebuild should be possible from
+  Launchpad source files plus Tianbot Git history, without live access to Gitee
+  or personal fork archive URLs.
 - Keep `ppa:tianbot/ros2go` user-facing. Use a separate testing PPA if a change
   needs soak time before publishing.
