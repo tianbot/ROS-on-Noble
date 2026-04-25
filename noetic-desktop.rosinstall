@@ -28,8 +28,8 @@
     version: bond_core-release-release-noetic-smclib-1.8.6-1
 - tar:
     local-name: catkin
-    uri: https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.10-1.tar.gz
-    version: catkin-release-release-noetic-catkin-0.8.10-1
+    uri: https://github.com/ros-gbp/catkin-release/archive/release/noetic/catkin/0.8.11-1.tar.gz
+    version: catkin-release-release-noetic-catkin-0.8.11-1
 - tar:
     local-name: class_loader
     uri: https://github.com/ros-gbp/class_loader-release/archive/release/noetic/class_loader/0.5.0-1.tar.gz
@@ -132,8 +132,8 @@
     version: diagnostics-release-release-noetic-self_test-1.11.0-1
 - tar:
     local-name: dynamic_reconfigure
-    uri: https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/noetic/dynamic_reconfigure/1.7.3-1.tar.gz
-    version: dynamic_reconfigure-release-release-noetic-dynamic_reconfigure-1.7.3-1
+    uri: https://github.com/ros-gbp/dynamic_reconfigure-release/archive/release/noetic/dynamic_reconfigure/1.7.6-1.tar.gz
+    version: dynamic_reconfigure-release-release-noetic-dynamic_reconfigure-1.7.6-1
 - tar:
     local-name: executive_smach/executive_smach
     uri: https://github.com/ros-gbp/executive_smach-release/archive/release/noetic/executive_smach/2.5.2-1.tar.gz
@@ -164,8 +164,8 @@
     version: gazebo_ros_pkgs-release-release-noetic-gazebo_msgs-2.9.2-1
 - tar:
     local-name: gazebo_ros_pkgs/gazebo_plugins
-    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/noetic/gazebo_plugins/2.9.2-1.tar.gz
-    version: gazebo_ros_pkgs-release-release-noetic-gazebo_plugins-2.9.2-1
+    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/noetic/gazebo_plugins/2.9.3-1.tar.gz
+    version: gazebo_ros_pkgs-release-release-noetic-gazebo_plugins-2.9.3-1
 - tar:
     local-name: gazebo_ros_pkgs/gazebo_ros
     uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release/archive/release/noetic/gazebo_ros/2.9.2-1.tar.gz
@@ -228,8 +228,8 @@
     version: geometry2-release-release-noetic-tf2_kdl-0.7.7-1
 - tar:
     local-name: geometry2/tf2_msgs
-    uri: https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_msgs/0.7.7-1.tar.gz
-    version: geometry2-release-release-noetic-tf2_msgs-0.7.7-1
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_msgs/0.7.8-1.tar.gz
+    version: geometry2-release-release-noetic-tf2_msgs-0.7.8-1
 - tar:
     local-name: geometry2/tf2_py
     uri: https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_py/0.7.7-1.tar.gz
@@ -268,8 +268,8 @@
     version: image_common-release-release-noetic-image_common-1.12.0-1
 - tar:
     local-name: image_common/image_transport
-    uri: https://github.com/ros-gbp/image_common-release/archive/release/noetic/image_transport/1.12.0-1.tar.gz
-    version: image_common-release-release-noetic-image_transport-1.12.0-1
+    uri: https://github.com/ros-gbp/image_common-release/archive/release/noetic/image_transport/1.12.1-1.tar.gz
+    version: image_common-release-release-noetic-image_transport-1.12.1-1
 - tar:
     local-name: image_common/polled_camera
     uri: https://github.com/ros-gbp/image_common-release/archive/release/noetic/polled_camera/1.12.0-1.tar.gz
@@ -320,8 +320,8 @@
     version: image_transport_plugins-release-release-noetic-image_transport_plugins-1.15.0-1
 - tar:
     local-name: image_transport_plugins/theora_image_transport
-    uri: https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/noetic/theora_image_transport/1.15.0-1.tar.gz
-    version: image_transport_plugins-release-release-noetic-theora_image_transport-1.15.0-1
+    uri: https://github.com/ros2-gbp/image_transport_plugins-release/archive/release/noetic/theora_image_transport/1.15.1-1.tar.gz
+    version: image_transport_plugins-release-release-noetic-theora_image_transport
 - tar:
     local-name: interactive_markers
     uri: https://github.com/ros-gbp/interactive_markers-release/archive/release/noetic/interactive_markers/1.12.0-1.tar.gz
@@ -348,12 +348,16 @@
     version: laser_filters-release-release-noetic-laser_filters-1.9.1-2
 - tar:
     local-name: laser_geometry
-    uri: https://github.com/ganyuanzhen/laser_geometry/archive/545b0811904f9540e806934e07f3aa5ee77aba0e.tar.gz
-    version: laser_geometry-545b0811904f9540e806934e07f3aa5ee77aba0e
+    uri: https://github.com/ros-gbp/laser_geometry-release/archive/release/noetic/laser_geometry/1.6.8-1.tar.gz
+    version: laser_geometry-release-release-noetic-laser_geometry-1.6.8-1
 - tar:
     local-name: laser_pipeline
     uri: https://github.com/ros-gbp/laser_pipeline-release/archive/release/noetic/laser_pipeline/1.6.4-1.tar.gz
     version: laser_pipeline-release-release-noetic-laser_pipeline-1.6.4-1
+- tar:
+    local-name: livox_ros_driver
+    uri: https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/livox_ros_driver-2.6.0-ros2go1.tar.gz
+    version: livox_ros_driver-2.6.0-ros2go1
 - tar:
     local-name: media_export
     uri: https://github.com/ros-gbp/media_export-release/archive/release/noetic/media_export/0.3.0-1.tar.gz
@@ -496,8 +500,8 @@
     version: ros-release-release-noetic-roslang-1.15.8-1
 - tar:
     local-name: ros/roslib
-    uri: https://github.com/ros-gbp/ros-release/archive/release/noetic/roslib/1.15.8-1.tar.gz
-    version: ros-release-release-noetic-roslib-1.15.8-1
+    uri: https://github.com/ros-gbp/ros-release/archive/release/noetic/roslib/1.15.9-1.tar.gz
+    version: ros-release-release-noetic-roslib-1.15.9-1
 - tar:
     local-name: ros/rosmake
     uri: https://github.com/ros-gbp/ros-release/archive/release/noetic/rosmake/1.15.8-1.tar.gz
@@ -696,8 +700,8 @@
     version: roslisp-release-release-noetic-roslisp-1.9.25-1
 - tar:
     local-name: rospack
-    uri: https://github.com/ros-gbp/rospack-release/archive/release/noetic/rospack/2.6.2-1.tar.gz
-    version: rospack-release-release-noetic-rospack-2.6.2-1
+    uri: https://github.com/ros-gbp/rospack-release/archive/release/noetic/rospack/2.6.3-1.tar.gz
+    version: rospack-release-release-noetic-rospack-2.6.3-1
 - tar:
     local-name: rqt/rqt_gui
     uri: https://github.com/ros-gbp/rqt-release/archive/release/noetic/rqt_gui/0.5.3-1.tar.gz
@@ -720,8 +724,8 @@
     version: rqt_action-release-release-noetic-rqt_action-0.4.9-1
 - tar:
     local-name: rqt_bag/rqt_bag
-    uri: https://github.com/ros-gbp/rqt_bag-release/archive/release/noetic/rqt_bag/0.5.1-1.tar.gz
-    version: rqt_bag-release-release-noetic-rqt_bag-0.5.1-1
+    uri: https://github.com/ros-gbp/rqt_bag-release/archive/release/noetic/rqt_bag/0.5.2-1.tar.gz
+    version: rqt_bag-release-release-noetic-rqt_bag-0.5.2-1
 - tar:
     local-name: rqt_bag/rqt_bag_plugins
     uri: https://github.com/ros-gbp/rqt_bag-release/archive/release/noetic/rqt_bag_plugins/0.5.1-1.tar.gz
@@ -836,16 +840,16 @@
     version: rqt_topic-release-release-noetic-rqt_topic-0.4.13-1
 - tar:
     local-name: rqt_web
-    uri: https://github.com/ros-gbp/rqt_web-release/archive/release/noetic/rqt_web/0.4.10-1.tar.gz
-    version: rqt_web-release-release-noetic-rqt_web-0.4.10-1
+    uri: https://github.com/ros-gbp/rqt_web-release/archive/release/noetic/rqt_web/0.4.11-1.tar.gz
+    version: rqt_web-release-release-noetic-rqt_web-0.4.11-1
 - tar:
     local-name: rviz
-    uri: https://github.com/ros-gbp/rviz-release/archive/release/noetic/rviz/1.14.25-1.tar.gz
-    version: rviz-release-release-noetic-rviz-1.14.25-1
+    uri: https://github.com/ros-gbp/rviz-release/archive/release/noetic/rviz/1.14.26-1.tar.gz
+    version: rviz-release-release-noetic-rviz-1.14.26-1
 - tar:
     local-name: stage
-    uri: https://github.com/ros-gbp/stage-release/archive/release/noetic/stage/4.3.0-1.tar.gz
-    version: stage-release-release-noetic-stage-4.3.0-1
+    uri: https://github.com/ros-gbp/stage-release/archive/release/noetic/stage/4.3.1-1.tar.gz
+    version: stage-release-release-noetic-stage
 - tar:
     local-name: stage_ros
     uri: https://github.com/ros-gbp/stage_ros-release/archive/release/noetic/stage_ros/1.8.0-1.tar.gz
@@ -868,8 +872,8 @@
     version: urdf_tutorial-release-release-noetic-urdf_tutorial-0.5.0-1
 - tar:
     local-name: vision_opencv/cv_bridge
-    uri: https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/cv_bridge/1.16.2-1.tar.gz
-    version: vision_opencv-release-release-noetic-cv_bridge-1.16.2-1
+    uri: https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/cv_bridge/1.16.3-1.tar.gz
+    version: vision_opencv-release-release-noetic-cv_bridge
 - tar:
     local-name: vision_opencv/image_geometry
     uri: https://github.com/ros-gbp/vision_opencv-release/archive/release/noetic/image_geometry/1.16.2-1.tar.gz
@@ -910,4 +914,3 @@
     local-name: xacro
     uri: https://github.com/ros-gbp/xacro-release/archive/release/noetic/xacro/1.14.18-1.tar.gz
     version: xacro-release-release-noetic-xacro-1.14.18-1
-
