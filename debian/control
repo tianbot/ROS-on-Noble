@@ -8,7 +8,7 @@ Build-Depends:
  cmake
 Standards-Version: 4.5.1
 
-Package: ros-noetic-desktop-full
+Package: ros-noetic-noble-bundle
 Architecture: any
 Depends:
  ${shlibs:Depends},
@@ -28,7 +28,6 @@ Depends:
  google-mock,
  googletest, 
  graphviz, 
- hddtemp, 
  hdf5-helpers, 
  ibverbs-providers, 
  icu-devtools,
@@ -113,5 +112,7 @@ Depends:
  qttools5-dev, 
  qttools5-dev-tools, 
  qttools5-private-dev
-Replaces: ros-noetic-desktop-full (<= 1.5.0)
-Description: ROS is a robotic tool
+Description: ROS Noetic desktop bundle for Ubuntu Noble
+ This package installs a bundled ROS Noetic desktop tree under /opt/ros/noetic.
+ It is intended as a practical Noble build artifact, not as a replacement for
+ the official split ROS Debian package set.

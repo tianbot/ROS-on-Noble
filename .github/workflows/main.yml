@@ -1,4 +1,4 @@
-name: Build on Ubuntu 22.04
+name: Build on Ubuntu 24.04
 
 permissions: write-all
 
@@ -11,8 +11,8 @@ on:
 
 jobs:
   debian:
-    name: Ubuntu 22.04
-    runs-on: ubuntu-22.04
+    name: Ubuntu 24.04
+    runs-on: ubuntu-24.04
     steps:
     - name: Maximize build space
       uses: easimon/maximize-build-space@master
@@ -20,15 +20,14 @@ jobs:
         root-reserve-mb: 4096
         swap-size-mb: 512
         remove-dotnet: 'true'
-        emove-android: 'true'
+        remove-android: 'true'
           
     - name: Checkout Source
       uses: actions/checkout@v4
       
     - name: Add repository
       run: |
-        sudo curl -L -o /etc/apt/trusted.gpg.d/ros1-on-ubuntu.gpg.asc https://sourceforge.net/projects/ros-for-ubuntu/files/repo/ROSMirror/public-file.key
-        sudo bash -c "echo 'deb https://sourceforge.net/projects/ros-for-ubuntu/files/repo/ROSMirror jammy main' >> /etc/apt/sources.list.d/ros1-on-ubuntu.list"
+        sudo add-apt-repository -y ppa:ros-for-jammy/noble
         sudo apt update -y
       
     - name: Install the basic dev packages
@@ -52,7 +51,12 @@ jobs:
         vcs import --input noetic-desktop.rosinstall ./src
 
     - name: Install Build Deps
-      run: rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro noetic -y
+      run: |
+        rosdep install --from-paths ./src \
+          --ignore-packages-from-source \
+          --rosdistro noetic \
+          -y \
+          --skip-keys='libgazebo11-dev hddtemp gazebo11'
 
     - name: Build Package
       run: |
