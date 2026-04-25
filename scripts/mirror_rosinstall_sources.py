@@ -14,6 +14,7 @@ from urllib.request import urlopen
 
 
 URI_RE = re.compile(r"^(?P<prefix>\s*uri:\s*)(?P<url>https?://\S+)(?P<suffix>\s*)$")
+LOCAL_NAME_RE = re.compile(r"^\s*local-name:\s*(?P<name>\S+)\s*$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -42,11 +43,30 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def cache_name(url: str) -> str:
+def safe_name(value: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_.+-]+", "-", value).strip("-") or "source"
+
+
+def cache_name(url: str, local_name: str | None, used_names: set[str]) -> str:
     parsed = urlparse(url)
     basename = os.path.basename(parsed.path) or "source.tar.gz"
-    digest = hashlib.sha256(url.encode()).hexdigest()[:16]
-    return f"{digest}-{basename}"
+    prefix = safe_name(local_name) if local_name else "source"
+    candidate = f"{prefix}-{safe_name(basename)}"
+    if candidate not in used_names:
+        used_names.add(candidate)
+        return candidate
+
+    stem, suffix = os.path.splitext(candidate)
+    if stem.endswith(".tar") and suffix in {".gz", ".xz", ".bz2"}:
+        stem, tar_suffix = os.path.splitext(stem)
+        suffix = tar_suffix + suffix
+    index = 2
+    while True:
+        numbered = f"{stem}-{index}{suffix}"
+        if numbered not in used_names:
+            used_names.add(numbered)
+            return numbered
+        index += 1
 
 
 def sha256_file(path: Path) -> str:
@@ -80,14 +100,22 @@ def main() -> int:
     manifest = []
     rewritten = []
     failures = []
+    used_names: set[str] = set()
+    current_local_name = None
     for line in lines:
+        local_name_match = LOCAL_NAME_RE.match(line)
+        if local_name_match:
+            current_local_name = local_name_match.group("name")
+            rewritten.append(line)
+            continue
+
         match = URI_RE.match(line)
         if not match:
             rewritten.append(line)
             continue
 
         url = match.group("url")
-        name = cache_name(url)
+        name = cache_name(url, current_local_name, used_names)
         target = args.mirror_dir / name
         if args.dry_run:
             status = "present" if target.exists() else "missing"

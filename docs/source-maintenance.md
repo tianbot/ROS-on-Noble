@@ -104,6 +104,9 @@ GitHub repository variable `ROS_SOURCE_MIRROR_BASE` should point at
 rewrites `noetic-desktop.rosinstall` to that mirror base before `vcs import`.
 The committed manifest `vendor/rosinstall-sources.manifest.json` records the
 original URL, mirror URL, cache filename, and SHA-256 for each mirrored tarball.
+Mirror asset filenames are derived from the rosinstall `local-name` plus the
+original tarball basename, for example
+`actionlib-actionlib-1.14.0-1.tar.gz`.
 
 For a rewrite-only preview against an already-published mirror:
 
