@@ -36,7 +36,7 @@ fork that carries the Noble mappings.
 
 ```shell
 sudo mkdir -p /etc/ros/rosdep/sources.list.d/
-sudo curl -o /etc/ros/rosdep/sources.list.d/20-default.list \
+sudo curl -fsSL -o /etc/ros/rosdep/sources.list.d/20-default.list \
   https://gitee.com/qinyinan/rosdistro/raw/master/rosdep/sources.list.d/20-default.list
 
 export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml
