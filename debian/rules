@@ -23,7 +23,7 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 	dh $@
 	
 override_dh_auto_clean:
-	rm -rf $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic
+	rm -rf $(CURDIR)/debian/ros-noetic-noble-bundle/opt/ros/noetic
 
 override_dh_auto_configure:
 	echo "No need to configure here"
@@ -32,11 +32,18 @@ override_dh_auto_build:
 	echo "No need to build here"
 
 override_dh_auto_install:
-	mkdir -p $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic
-	./src/catkin/bin/catkin_make_isolated --install-space $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic  --install -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=OFF -DPYTHON_EXECUTABLE=/usr/bin/python3 
+	mkdir -p $(CURDIR)/debian/ros-noetic-noble-bundle/opt/ros/noetic
+	./src/catkin/bin/catkin_make_isolated \
+		--install-space $(CURDIR)/debian/ros-noetic-noble-bundle/opt/ros/noetic \
+		--install \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCATKIN_ENABLE_TESTING=OFF \
+		-DPYTHON_EXECUTABLE=/usr/bin/python3
 
 override_dh_builddeb:
 	dh_builddeb -- -Zgzip -z9 --uniform-compression
 
 override_dh_shlibdeps:
-	dh_shlibdeps -- -l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/lib -l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/bin 
+	dh_shlibdeps -- \
+		-l$(CURDIR)/debian/ros-noetic-noble-bundle/opt/ros/noetic/lib \
+		-l$(CURDIR)/debian/ros-noetic-noble-bundle/opt/ros/noetic/bin
