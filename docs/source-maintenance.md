@@ -69,15 +69,49 @@ python scripts/audit_external_sources.py
 
 Current expected risk areas:
 
-- Gitee-hosted rosdistro references in local build instructions.
 - GitHub archive tarballs in `noetic-desktop.rosinstall`.
 - Personal fork tarballs and branch archive tarballs that are less stable than
   ROS release repositories.
+- The vendored rosdistro snapshot under `vendor/rosdistro` must be refreshed
+  deliberately when Noble rosdep mappings change.
 
 For patched packages, prefer importing the Launchpad source package and keeping
 the `.dsc`, `.orig.tar.*`, and Debian delta together. Do not make a Tianbot
 source upload depend on fetching code from Gitee, GitHub branch archives, or
 other mutable external URLs during the package build.
+
+## Mirror Bundle Tarballs
+
+The bundle build still uses `noetic-desktop.rosinstall`, which points at many
+GitHub archive tarballs. Mirror those tarballs before relying on CI for
+long-term rebuilds:
+
+```shell
+python scripts/mirror_rosinstall_sources.py \
+  --mirror-dir mirror/rosinstall-sources \
+  --base-url https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache
+```
+
+The command downloads each tarball, writes
+`mirror/rosinstall-sources/manifest.json`, and generates
+`noetic-desktop.mirrored.rosinstall`. Keep the generated mirror directory in
+Tianbot-controlled storage, not in Git.
+
+The current public mirror is the GitHub release
+`https://github.com/tianbot/ROS-on-Noble/releases/tag/source-cache`. The
+GitHub repository variable `ROS_SOURCE_MIRROR_BASE` should point at
+`https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache`. CI
+rewrites `noetic-desktop.rosinstall` to that mirror base before `vcs import`.
+The committed manifest `vendor/rosinstall-sources.manifest.json` records the
+original URL, mirror URL, cache filename, and SHA-256 for each mirrored tarball.
+
+For a rewrite-only preview against an already-published mirror:
+
+```shell
+python scripts/mirror_rosinstall_sources.py \
+  --rewrite-only \
+  --base-url "$ROS_SOURCE_MIRROR_BASE"
+```
 
 ## Patch And Upload
 

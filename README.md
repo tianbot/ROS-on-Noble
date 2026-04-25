@@ -31,21 +31,20 @@ sudo apt update
 ## Prepare rosdep
 
 The upstream Noetic rosdep data does not fully target Noble. Use the rosdistro
-fork that carries the Noble mappings.
+snapshot vendored in this repository. It is based on the Noble mappings from
+the original rosdistro fork, but local builds no longer depend on Gitee being
+available.
 
 ```shell
-sudo mkdir -p /etc/ros/rosdep/sources.list.d/
-sudo curl -fsSL -o /etc/ros/rosdep/sources.list.d/20-default.list \
-  https://gitee.com/qinyinan/rosdistro/raw/master/rosdep/sources.list.d/20-default.list
-
-export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml
+sudo python3 scripts/install_rosdep_snapshot.py
+export ROSDISTRO_INDEX_URL="file://$(pwd)/vendor/rosdistro/index-v4.yaml"
 rosdep update
 ```
 
 To persist the setting:
 
 ```shell
-echo 'export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml' >> ~/.bashrc
+echo "export ROSDISTRO_INDEX_URL=file://$(pwd)/vendor/rosdistro/index-v4.yaml" >> ~/.bashrc
 ```
 
 ## Fetch ROS sources
@@ -53,6 +52,14 @@ echo 'export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master
 ```shell
 mkdir -p src
 vcs import --input noetic-desktop.rosinstall ./src
+```
+
+For long-term rebuilds, mirror the tarballs first and import from the generated
+mirror input:
+
+```shell
+python scripts/mirror_rosinstall_sources.py --base-url "$ROS_SOURCE_MIRROR_BASE"
+vcs import --input noetic-desktop.mirrored.rosinstall ./src
 ```
 
 ## Install build dependencies

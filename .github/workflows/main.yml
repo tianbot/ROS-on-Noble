@@ -9,6 +9,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  ROS_SOURCE_MIRROR_BASE: ${{ vars.ROS_SOURCE_MIRROR_BASE }}
+
 jobs:
   debian:
     name: Ubuntu 24.04
@@ -37,19 +40,26 @@ jobs:
         
     - name: Prepare rosdep
       run: |
-        sudo mkdir -p /etc/ros/rosdep/sources.list.d/
-        sudo curl -fsSL -o /etc/ros/rosdep/sources.list.d/20-default.list https://gitee.com/qinyinan/rosdistro/raw/master/rosdep/sources.list.d/20-default.list
+        sudo python3 scripts/install_rosdep_snapshot.py
         cat /etc/ros/rosdep/sources.list.d/20-default.list
-        export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml
+        export ROSDISTRO_INDEX_URL="file://${GITHUB_WORKSPACE}/vendor/rosdistro/index-v4.yaml"
         echo "ROSDISTRO_INDEX_URL=${ROSDISTRO_INDEX_URL}" >> "$GITHUB_ENV"
         rosdep update
         
     - name: Get ROS Source
       run: |
+        ROSINSTALL_INPUT=noetic-desktop.rosinstall
+        if [ -n "${ROS_SOURCE_MIRROR_BASE:-}" ]; then
+          python3 scripts/mirror_rosinstall_sources.py \
+            --rewrite-only \
+            --base-url "${ROS_SOURCE_MIRROR_BASE}" \
+            --output noetic-desktop.mirrored.rosinstall
+          ROSINSTALL_INPUT=noetic-desktop.mirrored.rosinstall
+        fi
         for attempt in 1 2 3; do
           rm -rf src
           mkdir -p src
-          if vcs import --input noetic-desktop.rosinstall ./src; then
+          if vcs import --input "${ROSINSTALL_INPUT}" ./src; then
             exit 0
           fi
           sleep $((attempt * 20))

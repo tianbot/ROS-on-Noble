@@ -3,3 +3,5 @@
 /src/*
 /.venv/
 /sources/
+/mirror/
+/noetic-desktop.mirrored.rosinstall

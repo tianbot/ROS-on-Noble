@@ -1,0 +1,6 @@
+# Template only. Generate the active rosdep source list with:
+#
+#   python scripts/install_rosdep_snapshot.py
+#
+# The generated file uses absolute file:// URLs pointing at this vendored
+# rosdistro snapshot.
