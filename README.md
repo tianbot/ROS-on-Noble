@@ -95,3 +95,10 @@ dpkg-buildpackage -b --root-command="sudo" -uc -us -j4
 ```
 
 The output package is created in the parent directory.
+
+## Maintain Source Packages
+
+`ppa:tianbot/ros2go` is the published archive. Use the source maintenance
+workflow in [`docs/source-maintenance.md`](docs/source-maintenance.md) to copy
+the baseline PPA, import individual source packages, apply Tianbot patches, and
+upload source changes.
