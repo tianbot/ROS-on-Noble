@@ -10,7 +10,7 @@ Build-Depends:
  libgazebo-dev
 Standards-Version: 4.5.1
 
-Package: ros-noetic-noble-bundle
+Package: ros-noetic-desktop-full
 Architecture: any
 Depends:
  ${shlibs:Depends},
