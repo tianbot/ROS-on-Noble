@@ -47,8 +47,15 @@ jobs:
         
     - name: Get ROS Source
       run: |
-        mkdir -p src
-        vcs import --input noetic-desktop.rosinstall ./src
+        for attempt in 1 2 3; do
+          rm -rf src
+          mkdir -p src
+          if vcs import --input noetic-desktop.rosinstall ./src; then
+            exit 0
+          fi
+          sleep $((attempt * 20))
+        done
+        exit 1
 
     - name: Install Build Deps
       run: |
