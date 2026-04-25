@@ -33,10 +33,18 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	mkdir -p $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic
-	./src/catkin/bin/catkin_make_isolated --install-space $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic  --install -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=OFF -DPYTHON_EXECUTABLE=/usr/bin/python3 
+	./src/catkin/bin/catkin_make_isolated \
+		--install-space $(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic \
+		--install \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCATKIN_ENABLE_TESTING=OFF \
+		-DCMAKE_CXX_FLAGS=-DBOOST_TIMER_ENABLE_DEPRECATED \
+		-DPYTHON_EXECUTABLE=/usr/bin/python3
 
 override_dh_builddeb:
 	dh_builddeb -- -Zgzip -z9 --uniform-compression
 
 override_dh_shlibdeps:
-	dh_shlibdeps -- -l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/lib -l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/bin 
+	dh_shlibdeps -- \
+		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/lib \
+		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/bin

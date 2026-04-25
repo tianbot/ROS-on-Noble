@@ -1,61 +1,97 @@
-# Build ROS noetic on Ubuntu 22.04
+# Build ROS Noetic on Ubuntu 24.04 Noble
 
-# Packages are now available on launchpad!
+This repository builds a bundled ROS Noetic desktop tree for Ubuntu 24.04
+Noble. The generated Debian package installs ROS under `/opt/ros/noetic`.
 
-Have a look at <https://launchpad.net/~ros-for-jammy> for more details!
+This is a practical bundle package for Noble. The generated package keeps the
+traditional `ros-noetic-desktop-full` package name.
 
-## Install build deps
+## Scope
+
+- Ubuntu 24.04 Noble
+- amd64 builds first
+- ROS Noetic desktop sources
+- Classic Gazebo 11 from the Noble ROS PPA
+
+## Install build tools
 
 ```shell
+sudo apt update
+sudo apt install -y build-essential cmake curl debhelper devscripts equivs git python3-pip
 sudo pip3 install -U rosdep rosinstall_generator vcstool
 ```
 
-## Prepare `rosdep`
-
-Here I create a rosdep file for Ubuntu 22.04 on my git repo.
+## Add the Noble ROS PPA
 
 ```shell
-# 手动模拟 rosdep init
+sudo add-apt-repository ppa:ros-for-jammy/noble
+sudo apt update
+```
+
+## Prepare rosdep
+
+The upstream Noetic rosdep data does not fully target Noble. Use the rosdistro
+fork that carries the Noble mappings.
+
+```shell
 sudo mkdir -p /etc/ros/rosdep/sources.list.d/
-sudo curl -o /etc/ros/rosdep/sources.list.d/20-default.list https://gitee.com/qinyinan/rosdistro/raw/master/rosdep/sources.list.d/20-default.list
-# 为 rosdep update 换源
+sudo curl -fsSL -o /etc/ros/rosdep/sources.list.d/20-default.list \
+  https://gitee.com/qinyinan/rosdistro/raw/master/rosdep/sources.list.d/20-default.list
+
 export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml
 rosdep update
+```
 
-# 每次 rosdep update 之前，均需要增加该环境变量
-# 为了持久化该设定，可以将其写入 .bashrc 中，例如
+To persist the setting:
+
+```shell
 echo 'export ROSDISTRO_INDEX_URL=https://gitee.com/qinyinan/rosdistro/raw/master/index-v4.yaml' >> ~/.bashrc
 ```
 
-## Get Source Code for ROS
-
-In this step, you should make sure that you have a good internet connetion to Github. Source codes will be downloaded from Github.
-
-Some codes are patched so that they can be compiled on Ubunutu 22.04.
-
-```
-mkdir -p src
-
-vcs import --input noetic-desktop.rosinstall ./src
-```
-
-## Create install dirs
+## Fetch ROS sources
 
 ```shell
-sudo mkdir -p /opt/ros/noetic
-sudo chmod 777 /opt/ros/noetic
+mkdir -p src
+vcs import --input noetic-desktop.rosinstall ./src
 ```
 
 ## Install build dependencies
 
-```
-rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro noetic -y
-```
+Some rosdep keys still do not resolve cleanly on Noble:
 
-## Build and Install ROS
+- `libgazebo11-dev`: Noble uses `libgazebo-dev`
+- `gazebo11`: Noble uses `gazebo`
+- `hddtemp`: removed from Ubuntu repositories
+
+The PPA provides the Gazebo packages needed for the build, so skip the stale
+rosdep keys:
 
 ```shell
-./src/catkin/bin/catkin_make_isolated --install-space /opt/ros/noetic  --install -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=OFF -DPYTHON_EXECUTABLE=/usr/bin/python3 
+rosdep install --from-paths ./src \
+  --ignore-packages-from-source \
+  --rosdistro noetic \
+  -y \
+  --skip-keys='libgazebo11-dev hddtemp gazebo11'
 ```
 
-Wait patiently, there are around 234 packages to build.
+## Build and install locally
+
+```shell
+sudo mkdir -p /opt/ros/noetic
+sudo chmod 777 /opt/ros/noetic
+
+./src/catkin/bin/catkin_make_isolated \
+  --install-space /opt/ros/noetic \
+  --install \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCATKIN_ENABLE_TESTING=OFF \
+  -DPYTHON_EXECUTABLE=/usr/bin/python3
+```
+
+## Build the Debian package
+
+```shell
+dpkg-buildpackage -b --root-command="sudo" -uc -us -j4
+```
+
+The output package is created in the parent directory.
