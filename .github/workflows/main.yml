@@ -64,6 +64,11 @@ jobs:
           -y \
           --skip-keys='libgazebo11-dev hddtemp gazebo11'
 
+    - name: Install Gazebo build packages
+      run: |
+        sudo apt-get install -y gazebo libgazebo-dev
+        dpkg -L libgazebo-dev | grep -E 'gazebo(Config|-config)?\.cmake|cmake/gazebo' || true
+
     - name: Build Package
       run: |
         dpkg-buildpackage -b --root-command="sudo" -uc -us  -j4

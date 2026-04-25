@@ -5,7 +5,9 @@ Maintainer: Elysia <c.elysia@foxmail.com>
 Build-Depends:
  debhelper-compat (= 13),
  python3-pip,
- cmake
+ cmake,
+ gazebo,
+ libgazebo-dev
 Standards-Version: 4.5.1
 
 Package: ros-noetic-noble-bundle
