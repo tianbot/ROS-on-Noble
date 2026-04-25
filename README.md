@@ -13,19 +13,17 @@ traditional `ros-noetic-desktop-full` package name.
 - ROS Noetic desktop sources
 - Classic Gazebo 11 from the Noble ROS PPA
 
-## Install build tools
-
-```shell
-sudo apt update
-sudo apt install -y build-essential cmake curl debhelper devscripts equivs git python3-pip
-sudo pip3 install -U rosdep rosinstall_generator vcstool
-```
-
 ## Add the Noble ROS PPA
 
 ```shell
-sudo add-apt-repository ppa:ros-for-jammy/noble
+sudo add-apt-repository ppa:tianbot/ros2go
 sudo apt update
+```
+
+## Install build tools
+
+```shell
+sudo apt install -y build-essential cmake curl debhelper devscripts equivs git python3-rosdep vcstool
 ```
 
 ## Prepare rosdep
@@ -37,14 +35,14 @@ available.
 
 ```shell
 sudo python3 scripts/install_rosdep_snapshot.py
-export ROSDISTRO_INDEX_URL="file://$(pwd)/vendor/rosdistro/index-v4.yaml"
+export ROSDISTRO_INDEX_URL="file://$(pwd)/vendor/rosdistro/index-noetic.yaml"
 rosdep update
 ```
 
 To persist the setting:
 
 ```shell
-echo "export ROSDISTRO_INDEX_URL=file://$(pwd)/vendor/rosdistro/index-v4.yaml" >> ~/.bashrc
+echo "export ROSDISTRO_INDEX_URL=file://$(pwd)/vendor/rosdistro/index-noetic.yaml" >> ~/.bashrc
 ```
 
 ## Fetch ROS sources

@@ -46,5 +46,6 @@ override_dh_builddeb:
 
 override_dh_shlibdeps:
 	dh_shlibdeps -- \
+		-l/usr/lib/$(DEB_HOST_MULTIARCH) \
 		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/lib \
 		-l$(CURDIR)/debian/ros-noetic-desktop-full/opt/ros/noetic/bin

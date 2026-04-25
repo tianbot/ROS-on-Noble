@@ -74,6 +74,12 @@ Current expected risk areas:
   ROS release repositories.
 - The vendored rosdistro snapshot under `vendor/rosdistro` must be refreshed
   deliberately when Noble rosdep mappings change.
+- `vendor/rosdistro/index-noetic.yaml` intentionally exposes only Noetic to
+  `rosdep update`; do not point local builds at the full rosdistro index unless
+  every active distribution referenced by that index is vendored too.
+- The generated rosdep source list omits the legacy Fuerte `gbpdistro` entry
+  because Noetic builds do not need it and current `rosdep update` tries to
+  fetch stale platform data for it.
 
 For patched packages, prefer importing the Launchpad source package and keeping
 the `.dsc`, `.orig.tar.*`, and Debian delta together. Do not make a Tianbot

@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-pip3 install -U rosdep vcstool
+set -e
+
+exit 0

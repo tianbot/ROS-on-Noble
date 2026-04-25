@@ -1,0 +1,12 @@
+%YAML 1.1
+# ROS index file for ROS-on-Noble builds
+---
+type: index
+version: 4
+distributions:
+  noetic:
+    distribution: [noetic/distribution.yaml]
+    distribution_cache: http://repositories.ros.org/rosdistro_cache/noetic-cache.yaml.gz
+    distribution_status: active
+    distribution_type: ros1
+    python_version: 3

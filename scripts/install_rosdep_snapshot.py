@@ -39,9 +39,9 @@ def file_url(path: Path) -> str:
 def main() -> int:
     args = parse_args()
     snapshot = args.repo_root.resolve() / "vendor" / "rosdistro"
-    index = snapshot / "index-v4.yaml"
+    index = snapshot / "index-noetic.yaml"
 
-    required = [index, snapshot / "releases" / "fuerte.yaml"]
+    required = [index]
     required.extend(snapshot / relpath for relpath, _ in ROSDEP_FILES)
     missing = [str(path) for path in required if not path.exists()]
     if missing:
@@ -50,7 +50,6 @@ def main() -> int:
     lines = ["# Generated from vendor/rosdistro by scripts/install_rosdep_snapshot.py"]
     for relpath, suffix in ROSDEP_FILES:
         lines.append(f"yaml {file_url(snapshot / relpath)}{suffix}")
-    lines.append(f"gbpdistro {file_url(snapshot / 'releases' / 'fuerte.yaml')} fuerte")
     lines.append("")
 
     args.target.parent.mkdir(parents=True, exist_ok=True)
