@@ -121,6 +121,52 @@ python scripts/mirror_rosinstall_sources.py \
   --base-url "$ROS_SOURCE_MIRROR_BASE"
 ```
 
+## Build A PPA Source Upload
+
+Launchpad PPAs do not accept locally built `.deb` files. Upload a source
+package and let Launchpad build the binary package.
+
+For this bundle package, the source upload vendors the imported ROS workspace
+inside the upstream `.orig.tar.xz`. This keeps the Launchpad build offline with
+respect to ROS source fetching while preserving the existing
+`debian/rules` build path.
+
+Fast path on a builder that already has a verified imported workspace:
+
+```shell
+scripts/package_ppa_source.sh \
+  --no-sign \
+  --use-existing-src /tmp/ws/ROS-on-Noble/src
+```
+
+Fresh source import from the mirrored tarball cache:
+
+```shell
+scripts/package_ppa_source.sh --no-sign
+```
+
+The first upload of a new upstream version must include the full orig tarball:
+
+```shell
+scripts/package_ppa_source.sh \
+  --upload \
+  --include-orig -sa \
+  --use-existing-src /tmp/ws/ROS-on-Noble/src
+```
+
+For later Debian revisions that reuse the already accepted orig tarball:
+
+```shell
+scripts/package_ppa_source.sh \
+  --upload \
+  --include-orig -sd \
+  --use-existing-src /tmp/ws/ROS-on-Noble/src
+```
+
+The upload host must have a GPG secret key associated with an account that can
+upload to `ppa:tianbot/ros2go`; unsigned source changes are useful only for
+validation.
+
 ## Patch And Upload
 
 Inside the extracted source tree:
