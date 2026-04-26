@@ -1,4 +1,4 @@
-Source: ros
+Source: ros-noetic-desktop-full
 Section: devel
 Priority: optional
 Maintainer: Elysia <c.elysia@foxmail.com>
