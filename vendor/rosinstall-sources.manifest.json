@@ -14,6 +14,27 @@
     "status": "present"
   },
   {
+    "cache_name": "apriltag-3.2.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/apriltag-3.2.0-1.tar.gz",
+    "sha256": "aa4d2209785b7a6a2acdd86d1939d886efd3a7ddbc5401d1e0d4f67de6a4ac45",
+    "source_url": "https://github.com/AprilRobotics/apriltag-release/archive/release/noetic/apriltag/3.2.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "apriltag_ros-3.2.1-3.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/apriltag_ros-3.2.1-3.tar.gz",
+    "sha256": "831217c3c023b76328b58657ab89f70691dffbe0bf3363bd2e60408c1cea8152",
+    "source_url": "https://github.com/AprilRobotics/apriltag_ros-release/archive/release/noetic/apriltag_ros/3.2.1-3.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "async_web_server_cpp-1.0.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/async_web_server_cpp-1.0.3-1.tar.gz",
+    "sha256": "9656bf97c0fc534351f9d3914cd7eb40b690c9272d02733ab05b62486663d30e",
+    "source_url": "https://github.com/fkie-release/async_web_server_cpp-release/archive/release/noetic/async_web_server_cpp/1.0.3-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "bond_core-bond-1.8.6-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/bond_core-bond-1.8.6-1.tar.gz",
     "sha256": "4d36aea04cde0bd1f8cc0e7a2136584a5ebe15ebbe6eb6a65637aa3e09918a5b",
@@ -357,6 +378,27 @@
     "status": "present"
   },
   {
+    "cache_name": "geographic_info-geodesy-0.5.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geographic_info-geodesy-0.5.6-1.tar.gz",
+    "sha256": "69da32daf80a20fd6bdf586d440a31a17afcadd46eb6999cacbcf4ce63bf3542",
+    "source_url": "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geodesy/0.5.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "geographic_info-geographic_info-0.5.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geographic_info-geographic_info-0.5.6-1.tar.gz",
+    "sha256": "be539a05f207583008d37725779e71984db5d3a5991dbbd19f6e158cd3c90272",
+    "source_url": "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_info/0.5.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "geographic_info-geographic_msgs-0.5.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geographic_info-geographic_msgs-0.5.6-1.tar.gz",
+    "sha256": "0c19562199a4f9f813362ad87d4345bb8ae77c77c41f7fe332eb672ad19d2d79",
+    "source_url": "https://github.com/ros-geographic-info/geographic_info-release/archive/release/noetic/geographic_msgs/0.5.6-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "geometry-159d49a5d85292e4655d225e47da483173cd89d6.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geometry-159d49a5d85292e4655d225e47da483173cd89d6.tar.gz",
     "sha256": "99e4405ed1fd2686737316a431a35ad83cd0b3e359e01bfdaae6b97752415026",
@@ -385,13 +427,6 @@
     "status": "present"
   },
   {
-    "cache_name": "geometry2-tf2_sensor_msgs-ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
-    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geometry2-tf2_sensor_msgs-ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
-    "sha256": "292f609102699da0f5e06149e0e26aff8f4ff6f86f0679a999784508a0290649",
-    "source_url": "https://github.com/ros-gbp/geometry2-release/archive/refs/tags/debian/ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
-    "status": "present"
-  },
-  {
     "cache_name": "geometry2-tf2_kdl-0.7.7-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geometry2-tf2_kdl-0.7.7-1.tar.gz",
     "sha256": "f706d2ab7d6be921dc85a10c0d7eb656d60d00b00332a0b4388c470b5dbe9818",
@@ -417,6 +452,13 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geometry2-tf2_ros-0.7.7-1.tar.gz",
     "sha256": "15a92e64deab87ec27986b6d16d690bef7979cefbe2346a0fc1e37090acb3881",
     "source_url": "https://github.com/ros-gbp/geometry2-release/archive/release/noetic/tf2_ros/0.7.7-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "geometry2-tf2_sensor_msgs-ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/geometry2-tf2_sensor_msgs-ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
+    "sha256": "292f609102699da0f5e06149e0e26aff8f4ff6f86f0679a999784508a0290649",
+    "source_url": "https://github.com/ros-gbp/geometry2-release/archive/refs/tags/debian/ros-noetic-tf2-sensor-msgs_0.7.7-1_focal.tar.gz",
     "status": "present"
   },
   {
@@ -567,6 +609,34 @@
     "status": "present"
   },
   {
+    "cache_name": "imu_tools-imu_complementary_filter-1.2.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/imu_tools-imu_complementary_filter-1.2.6-1.tar.gz",
+    "sha256": "35634b87575262536b8943d6588f1b3d44d765a0df4012295d50da357d9e2923",
+    "source_url": "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_complementary_filter/1.2.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "imu_tools-imu_filter_madgwick-1.2.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/imu_tools-imu_filter_madgwick-1.2.6-1.tar.gz",
+    "sha256": "16ce36f76a64b7a943990fad229541d682f6e6a613b6534a62a4605b90605538",
+    "source_url": "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_filter_madgwick/1.2.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "imu_tools-imu_tools-1.2.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/imu_tools-imu_tools-1.2.6-1.tar.gz",
+    "sha256": "b6f96e7da9d7949ca0a7f75645185f037192ef4d3f983a52fc2db75ed0131e40",
+    "source_url": "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/imu_tools/1.2.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "imu_tools-rviz_imu_plugin-1.2.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/imu_tools-rviz_imu_plugin-1.2.6-1.tar.gz",
+    "sha256": "f6820392a73baab4c11089bb00d056778dffb2bbd1c171aa863a42bf9d49a828",
+    "source_url": "https://github.com/uos-gbp/imu_tools-release/archive/release/noetic/rviz_imu_plugin/1.2.6-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "interactive_markers-1.12.0-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/interactive_markers-1.12.0-1.tar.gz",
     "sha256": "d4a8ca9eb762c228712bd9479147db3a73b0cafcf526c926fb406a2bc523ce87",
@@ -585,6 +655,20 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/joint_state_publisher-joint_state_publisher_gui-1.15.1-1.tar.gz",
     "sha256": "0a285a9ff411a8dc5944e4540fade94f52a067f70fe79656ae40061938f8dc34",
     "source_url": "https://github.com/ros-gbp/joint_state_publisher-release/archive/release/noetic/joint_state_publisher_gui/1.15.1-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "joystick_drivers-joy-1.15.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/joystick_drivers-joy-1.15.1-1.tar.gz",
+    "sha256": "d09ea880713158e4a7455a892bd618e1c8d2b634cc9fa5d03b7cf9cf73e1ad0c",
+    "source_url": "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/joy/1.15.1-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "joystick_drivers-spacenav_node-1.15.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/joystick_drivers-spacenav_node-1.15.1-1.tar.gz",
+    "sha256": "8ef279005e45b2f083cf23b15ccf1ab440e601f7bf2ae194deda441c20396a9e",
+    "source_url": "https://github.com/ros-gbp/joystick_drivers-release/archive/release/noetic/spacenav_node/1.15.1-1.tar.gz",
     "status": "present"
   },
   {
@@ -620,6 +704,13 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/laser_pipeline-1.6.4-1.tar.gz",
     "sha256": "82a30e8eb4352285020531334f0167e76b46d5d4ea47f89570029f7f56d5e9fd",
     "source_url": "https://github.com/ros-gbp/laser_pipeline-release/archive/release/noetic/laser_pipeline/1.6.4-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "laser_proc-0.1.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/laser_proc-0.1.6-1.tar.gz",
+    "sha256": "5360596a9ded7aa37e3e8bac79473086631fce5968fa60c853e126c9edaa4486",
+    "source_url": "https://github.com/ros-gbp/laser_proc-release/archive/release/noetic/laser_proc/0.1.6-1.tar.gz",
     "status": "present"
   },
   {
@@ -707,10 +798,129 @@
     "status": "present"
   },
   {
+    "cache_name": "navigation-amcl-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-amcl-1.17.3-1.tar.gz",
+    "sha256": "7af0fcd1979c2a0258cb2755e3205b06212cfcf8841e06b6620b0deac8979187",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/amcl/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-base_local_planner-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-base_local_planner-1.17.3-1.tar.gz",
+    "sha256": "b346b275764d1148c443a7e48c96a70a4695adce362cbe896f2ab0bb0cbbccc3",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/base_local_planner/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-carrot_planner-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-carrot_planner-1.17.3-1.tar.gz",
+    "sha256": "50b110e1d1ce7bfee9bf417b8b53b122723b584658bb1ea9df282e725197ac86",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/carrot_planner/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-clear_costmap_recovery-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-clear_costmap_recovery-1.17.3-1.tar.gz",
+    "sha256": "6bc5943f141b7ff5ff918111f9a3b80786918ff47fac3b5600355722c460d769",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/clear_costmap_recovery/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-costmap_2d-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-costmap_2d-1.17.3-1.tar.gz",
+    "sha256": "162386772dec99ccc2db612eb30e035905ad43d74c31bd22155dc31c4d90f2a4",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/costmap_2d/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-dwa_local_planner-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-dwa_local_planner-1.17.3-1.tar.gz",
+    "sha256": "321577dbc6f5cb6fcbafec1058099bf32d9c48f8cb88dbf231ac823e88264a9d",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/dwa_local_planner/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-fake_localization-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-fake_localization-1.17.3-1.tar.gz",
+    "sha256": "4240e09fa04e848501cea69ea489ac55120088a2677cd2bc3159795e7f11d3b2",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/fake_localization/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-global_planner-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-global_planner-1.17.3-1.tar.gz",
+    "sha256": "796c1eda07d56375850f5912ed3285fb00f688c407bcde7b16deba120d8fac72",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/global_planner/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-map_server-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-map_server-1.17.3-1.tar.gz",
+    "sha256": "00c00f4cfbd40068d58b4129d37d25fe4fb6cdec498c2442a38a3d09d9649a41",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/map_server/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-move_base-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-move_base-1.17.3-1.tar.gz",
+    "sha256": "75b4b8c9187d2756125e6cdd1c98352d66aeb5a913e2f17dd0373fe54f228b0c",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_base/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-move_slow_and_clear-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-move_slow_and_clear-1.17.3-1.tar.gz",
+    "sha256": "543dac0dcb1acff0e0926a5ef0036e904337de5f75048373e544657c0b584d30",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/move_slow_and_clear/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-nav_core-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-nav_core-1.17.3-1.tar.gz",
+    "sha256": "fd322d44ed3dcd19b75fdfa32c5603e5449cd823fcc057172bbdc91d4784e5d2",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/nav_core/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-navfn-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-navfn-1.17.3-1.tar.gz",
+    "sha256": "40735830609fcba121f42952055e9ac69ce52bd095c19279c389401f26e9ab64",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/navfn/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-navigation-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-navigation-1.17.3-1.tar.gz",
+    "sha256": "49c7c35a58254bb97dc2cfbdc9231178f766be31ffbac191b45dce2f7a2ee941",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/navigation/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-rotate_recovery-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-rotate_recovery-1.17.3-1.tar.gz",
+    "sha256": "c07b3f5e56064f1d95dacc50e2a48a47aeed43bf4a7f6160b5e7310eddc80748",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/rotate_recovery/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation-voxel_grid-1.17.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation-voxel_grid-1.17.3-1.tar.gz",
+    "sha256": "86069ba9c96c545643e675a73ac130105a82bce9c6ce3454ccde56f44bac857d",
+    "source_url": "https://github.com/ros-gbp/navigation-release/archive/release/noetic/voxel_grid/1.17.3-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "navigation_msgs-map_msgs-1.14.1-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation_msgs-map_msgs-1.14.1-1.tar.gz",
     "sha256": "e9ae695b8c3f745dc6c3878810a97546c4dd528000a0c8058d6f1f41983df432",
     "source_url": "https://github.com/ros-gbp/navigation_msgs-release/archive/release/noetic/map_msgs/1.14.1-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "navigation_msgs-move_base_msgs-1.14.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/navigation_msgs-move_base_msgs-1.14.1-1.tar.gz",
+    "sha256": "a3cfcbeed9a83959c3a7b12abf8737062bee94c627d1a961be4ff589a4c4ad7a",
+    "source_url": "https://github.com/ros-gbp/navigation_msgs-release/archive/release/noetic/move_base_msgs/1.14.1-1.tar.gz",
     "status": "present"
   },
   {
@@ -732,6 +942,13 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/nodelet_core-nodelet_topic_tools-1.11.0-2.tar.gz",
     "sha256": "0f42086736f35d89d0a0e14cbd2d2d329cd7920936df789ab108b39baf8986c2",
     "source_url": "https://github.com/ros-gbp/nodelet_core-release/archive/release/noetic/nodelet_topic_tools/1.11.0-2.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "openslam_gmapping-0.2.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/openslam_gmapping-0.2.1-1.tar.gz",
+    "sha256": "46b85b5f979f3ab7a93f0f9ddcbd4aad10cc493d137e8d5b68984ecc66e4c815",
+    "source_url": "https://github.com/ros-gbp/openslam_gmapping-release/archive/release/noetic/openslam_gmapping/0.2.1-1.tar.gz",
     "status": "present"
   },
   {
@@ -809,6 +1026,13 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/resource_retriever-e93cb6018e667fd9bc40d15ae0b5e33b5832ebb1.tar.gz",
     "sha256": "dce28f6a90f4d7b7f6d876b930ecbdc1a995e7ee3b1a64745aea7b1e32f508a7",
     "source_url": "https://github.com/ros/resource_retriever/archive/e93cb6018e667fd9bc40d15ae0b5e33b5832ebb1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "robot_localization-2.7.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/robot_localization-2.7.6-1.tar.gz",
+    "sha256": "6a187bac4d1fb6267fbfd18881cb0aa760a7af75ded84ef02b3482a5627a9607",
+    "source_url": "https://github.com/cra-ros-pkg/robot_localization-release/archive/release/noetic/robot_localization/2.7.6-1.tar.gz",
     "status": "present"
   },
   {
@@ -1155,10 +1379,52 @@
     "status": "present"
   },
   {
+    "cache_name": "rosauth-1.0.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosauth-1.0.1-1.tar.gz",
+    "sha256": "f00e6e72af902207c80739d19befdd64aa11cfc6256e284507837d11e1c2ba1d",
+    "source_url": "https://github.com/gt-rail-release/rosauth-release/archive/release/noetic/rosauth/1.0.1-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "rosbag_migration_rule-1.0.1-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbag_migration_rule-1.0.1-1.tar.gz",
     "sha256": "4a014649acb782d64beee309a200e9043582ac3f27492568afe600873a2de41a",
     "source_url": "https://github.com/ros-gbp/rosbag_migration_rule-release/archive/release/noetic/rosbag_migration_rule/1.0.1-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosbridge_suite-rosapi-0.11.17-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbridge_suite-rosapi-0.11.17-1.tar.gz",
+    "sha256": "7f94f672ef42b8a8d33be48c5890f43f8b9cf1de4495e018242d0eb0231d9ec8",
+    "source_url": "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosapi/0.11.17-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosbridge_suite-rosbridge_library-0.11.17-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbridge_suite-rosbridge_library-0.11.17-1.tar.gz",
+    "sha256": "01ae6153076f7ae789bf7c2a5a2a4387878fc36e1f0a1c6378486b442df677fc",
+    "source_url": "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_library/0.11.17-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosbridge_suite-rosbridge_msgs-0.11.17-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbridge_suite-rosbridge_msgs-0.11.17-1.tar.gz",
+    "sha256": "1ff3a4b77b2c21903d043307f5cbfb75bb498536ae5afa4b3e3756027c2e332d",
+    "source_url": "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_msgs/0.11.17-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosbridge_suite-rosbridge_server-0.11.17-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbridge_suite-rosbridge_server-0.11.17-1.tar.gz",
+    "sha256": "fc9a4d0972e6d161f78ef78bcbd74dfb5f26e978bbd05732e33876df1a2f30c3",
+    "source_url": "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_server/0.11.17-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosbridge_suite-rosbridge_suite-0.11.17-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosbridge_suite-rosbridge_suite-0.11.17-1.tar.gz",
+    "sha256": "e80beaca82081afc1bdaf4306a5e3d76354e93c6ed6fb205ea174c80565a6559",
+    "source_url": "https://github.com/RobotWebTools-release/rosbridge_suite-release/archive/release/noetic/rosbridge_suite/0.11.17-1.tar.gz",
     "status": "present"
   },
   {
@@ -1229,6 +1495,104 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rospack-2.6.3-1.tar.gz",
     "sha256": "60484b89cc155a3f80957bf6fbab7659175ef55af2ed44115d0ebb7b13b132c1",
     "source_url": "https://github.com/ros-gbp/rospack-release/archive/release/noetic/rospack/2.6.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial-0.9.2-1.tar.gz",
+    "sha256": "385b70a12c785dfdba5200cb4039804c45a7a1a160d37dd69cb2500ad7dd2135",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_arduino-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_arduino-0.9.2-1.tar.gz",
+    "sha256": "46d416adced28af57c50359dc91b2115b3facfea382bd5ec4da291685c565739",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_arduino/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_chibios-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_chibios-0.9.2-1.tar.gz",
+    "sha256": "d2ded99ec728d90b3bb3d22d5938c8d8e2769c001544c0aef5ea914c69a9c967",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_chibios/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_client-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_client-0.9.2-1.tar.gz",
+    "sha256": "4f932635d00221710295d78654ff6dcef7a160d09de9dec4a194045c899d9579",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_client/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_embeddedlinux-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_embeddedlinux-0.9.2-1.tar.gz",
+    "sha256": "9284acfda80db76bf60c1726c9d6b0508b32d227c12ab0d9826eeb5873827072",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_embeddedlinux/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_mbed-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_mbed-0.9.2-1.tar.gz",
+    "sha256": "95617f93588caeb0f2858cbb1363cbe6970510040368ecf27ed8e65e25e0a40a",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_mbed/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_msgs-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_msgs-0.9.2-1.tar.gz",
+    "sha256": "5fc6ee93f3dac1fdf6256e3db2a2a9db83918cc003fd9908657e1fc22551693a",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_msgs/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_python-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_python-0.9.2-1.tar.gz",
+    "sha256": "0e115dc3f3a969b38ce2eb670dd8db6caa9266857dde5c2d2032a8ef3ff83f59",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_python/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_server-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_server-0.9.2-1.tar.gz",
+    "sha256": "b6ce6492de950113b015041396436e87ed1ea1b0736b0f2d4bf842383b7531ee",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_server/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_tivac-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_tivac-0.9.2-1.tar.gz",
+    "sha256": "b124e1b25c3ca19bd0120d06a5a27240648de4be1b7261bcc8403fa034af2f28",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_tivac/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_vex_cortex-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_vex_cortex-0.9.2-1.tar.gz",
+    "sha256": "8b88193e6ba6f2f6675575989424bf6d9b1e8fdd48d4199d3248b22e6f0629e6",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_vex_cortex/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_vex_v5-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_vex_v5-0.9.2-1.tar.gz",
+    "sha256": "f165817a10a468231652f5f856aafd5fceff1e90f12ecbcc76ba8039a5362ddd",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_vex_v5/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_windows-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_windows-0.9.2-1.tar.gz",
+    "sha256": "d52aa5457e1e5bde4052e4d74e5448cb2410567951116cbda397bd03049d9cfd",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_windows/0.9.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "rosserial-rosserial_xbee-0.9.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/rosserial-rosserial_xbee-0.9.2-1.tar.gz",
+    "sha256": "4678e4df53472749250a2ed93c06c2aa6c7128c025b20169c026924b100f5630",
+    "source_url": "https://github.com/ros-gbp/rosserial-release/archive/release/noetic/rosserial_xbee/0.9.2-1.tar.gz",
     "status": "present"
   },
   {
@@ -1484,6 +1848,27 @@
     "status": "present"
   },
   {
+    "cache_name": "serial-1.2.1-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/serial-1.2.1-1.tar.gz",
+    "sha256": "9dded001cf674418e67b3c69ad0df7105ca299f5b368a9e8ec6894c7324a5ec2",
+    "source_url": "https://github.com/wjwwood/serial-release/archive/release/noetic/serial/1.2.1-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "slam_gmapping-gmapping-1.4.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/slam_gmapping-gmapping-1.4.2-1.tar.gz",
+    "sha256": "9b31604092fbb4547f6fbc6359d83fa1f43a5038348955fe24b48245fb7506df",
+    "source_url": "https://github.com/ros-gbp/slam_gmapping-release/archive/release/noetic/gmapping/1.4.2-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "slam_gmapping-slam_gmapping-1.4.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/slam_gmapping-slam_gmapping-1.4.2-1.tar.gz",
+    "sha256": "f630ba8630dc41063e8ad975fa03c709592592a115ebaf857d0541343721c49c",
+    "source_url": "https://github.com/ros-gbp/slam_gmapping-release/archive/release/noetic/slam_gmapping/1.4.2-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "stage-4.3.1-1.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/stage-4.3.1-1.tar.gz",
     "sha256": "34c520456e7f5adb633bb2fb2d3c41b281530424a2bed4fe241932334231c81e",
@@ -1505,6 +1890,48 @@
     "status": "present"
   },
   {
+    "cache_name": "teleop_twist_joy-0.1.3-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/teleop_twist_joy-0.1.3-1.tar.gz",
+    "sha256": "86330180ab0c8a15456eb72ec998798f841e1fcab88a9dd87c5c9a2a16037a2f",
+    "source_url": "https://github.com/ros-gbp/teleop_twist_joy-release/archive/release/noetic/teleop_twist_joy/0.1.3-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "teleop_twist_keyboard-1.0.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/teleop_twist_keyboard-1.0.0-1.tar.gz",
+    "sha256": "1b2851ee341bc46c65c51b2c4063e293d03f15ea95fcd524f02dbb6fc99088de",
+    "source_url": "https://github.com/ros-gbp/teleop_twist_keyboard-release/archive/release/noetic/teleop_twist_keyboard/1.0.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "tf2_web_republisher-0.3.2-3.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/tf2_web_republisher-0.3.2-3.tar.gz",
+    "sha256": "30a3d8b8ec4d7c65ac4bb5cbffd2e9faf8c9b1d66ceaf9fd0aa1d175b320f93d",
+    "source_url": "https://github.com/RobotWebTools-release/tf2_web_republisher-release/archive/release/noetic/tf2_web_republisher/0.3.2-3.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "unique_identifier-unique_id-1.0.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/unique_identifier-unique_id-1.0.6-1.tar.gz",
+    "sha256": "3bc1d8eace40dc0a1346ca7740c67962aba40ad3d6dabc095370e5b97b33d88f",
+    "source_url": "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/noetic/unique_id/1.0.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "unique_identifier-unique_identifier-1.0.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/unique_identifier-unique_identifier-1.0.6-1.tar.gz",
+    "sha256": "8e57df192afc4bee7a46c3f9e80251bf4b8c555f96b36154ea15474ab1d2848f",
+    "source_url": "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/noetic/unique_identifier/1.0.6-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "unique_identifier-uuid_msgs-1.0.6-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/unique_identifier-uuid_msgs-1.0.6-1.tar.gz",
+    "sha256": "4299d106f055e2a4e80f4ae9c7e94acab1ea1ccf9c8efb041514ee115276cc98",
+    "source_url": "https://github.com/ros-geographic-info/unique_identifier-release/archive/release/noetic/uuid_msgs/1.0.6-1.tar.gz",
+    "status": "present"
+  },
+  {
     "cache_name": "urdf-1604edc646c4c5400dc7981ba9dbfb1742c961f8.tar.gz",
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/urdf-1604edc646c4c5400dc7981ba9dbfb1742c961f8.tar.gz",
     "sha256": "8d711b83b38ffaa27c712125d5b44f38ed54d7884ee1198e97f9cfa314c70828",
@@ -1523,6 +1950,69 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/urdf_tutorial-0.5.0-1.tar.gz",
     "sha256": "1140907900dc413b980ce0180c93d84ec04d285530632b83d71f1fa2c63229e8",
     "source_url": "https://github.com/ros-gbp/urdf_tutorial-release/archive/release/noetic/urdf_tutorial/0.5.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "urg_c-1.0.405-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/urg_c-1.0.405-1.tar.gz",
+    "sha256": "c2af896d06b72140f91876cdc806f1d43015c872b50693a0303ec93b0d7a3750",
+    "source_url": "https://github.com/ros-gbp/urg_c-release/archive/release/noetic/urg_c/1.0.405-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "urg_node-0.1.18-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/urg_node-0.1.18-1.tar.gz",
+    "sha256": "e0ac11a6cd9056155458a6ceb1b639adcf289bab7933f2236bb0cdbfae305d6b",
+    "source_url": "https://github.com/ros-gbp/urg_node-release/archive/release/noetic/urg_node/0.1.18-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "usb_cam-0.3.7-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/usb_cam-0.3.7-1.tar.gz",
+    "sha256": "cfc1dbd0ef6c02804caea1dfba3d496792e63bac1a0cda962d21f1ad29d1482a",
+    "source_url": "https://github.com/ros-gbp/usb_cam-release/archive/release/noetic/usb_cam/0.3.7-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne-1.7.0-1.tar.gz",
+    "sha256": "3bee8e89bc6438c14fa690e18dd43db01a78ab2a5e445252700579f220b3cefc",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne/1.7.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne_driver-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne_driver-1.7.0-1.tar.gz",
+    "sha256": "e409444fad24c80117381fc5f0445b0ab30b0a32c13ccbff331e666f15ed1fa6",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_driver/1.7.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne_laserscan-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne_laserscan-1.7.0-1.tar.gz",
+    "sha256": "341bf6a4773deb0266a8afb12db34c069c9d03e2ebc34fdd269c367d2064a35c",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_laserscan/1.7.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne_msgs-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne_msgs-1.7.0-1.tar.gz",
+    "sha256": "508ef5d08d4d2168dae0e7adf55eeae4f6090c01c05280d0bf1d9f2f31a1ee0f",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_msgs/1.7.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne_pcl-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne_pcl-1.7.0-1.tar.gz",
+    "sha256": "d4dae03da906b8fa5814d3c20b469e637a6046d89d5130567474c1f4e9dadbe8",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pcl/1.7.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "velodyne-velodyne_pointcloud-1.7.0-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/velodyne-velodyne_pointcloud-1.7.0-1.tar.gz",
+    "sha256": "b8425f2244f94b610459ede15bdb228eb842e4cd84a6ae10aed6dd67962b6de7",
+    "source_url": "https://github.com/ros-drivers-gbp/velodyne-release/archive/release/noetic/velodyne_pointcloud/1.7.0-1.tar.gz",
     "status": "present"
   },
   {
@@ -1586,6 +2076,13 @@
     "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/visualization_tutorials-visualization_tutorials-0.11.0-1.tar.gz",
     "sha256": "595fcd50bd39b8cfa6ddcafd6e3365d6ed515d8a0cebbeb05603c29400c62cb9",
     "source_url": "https://github.com/ros-gbp/visualization_tutorials-release/archive/release/noetic/visualization_tutorials/0.11.0-1.tar.gz",
+    "status": "present"
+  },
+  {
+    "cache_name": "web_video_server-web_video_server-0.2.2-1-ros2go1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-web_video_server-0.2.2-1-ros2go1.tar.gz",
+    "sha256": "6a6b0157d2a616f2b3067cf031d45e7d67db91f24f7ade43c4643207e63457eb",
+    "source_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-0.2.2-1-ros2go1.tar.gz",
     "status": "present"
   },
   {
