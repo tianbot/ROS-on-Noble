@@ -2079,10 +2079,10 @@
     "status": "present"
   },
   {
-    "cache_name": "web_video_server-web_video_server-0.2.2-1-ros2go1.tar.gz",
-    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-web_video_server-0.2.2-1-ros2go1.tar.gz",
-    "sha256": "6a6b0157d2a616f2b3067cf031d45e7d67db91f24f7ade43c4643207e63457eb",
-    "source_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-0.2.2-1-ros2go1.tar.gz",
+    "cache_name": "web_video_server-ros2go-noble-0.2.2-1.tar.gz",
+    "mirror_url": "https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-ros2go-noble-0.2.2-1.tar.gz",
+    "sha256": "0053b00cbbc17d36b39824308a9a6e8bef972ef1294807971697b914a4ea5aa4",
+    "source_url": "https://github.com/tianbot/web_video_server/archive/refs/tags/ros2go-noble-0.2.2-1.tar.gz",
     "status": "present"
   },
   {

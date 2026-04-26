@@ -1188,8 +1188,8 @@
     version: visualization_tutorials-release-release-noetic-visualization_tutorials-0.11.0-1
 - tar:
     local-name: web_video_server
-    uri: https://github.com/tianbot/ROS-on-Noble/releases/download/source-cache/web_video_server-0.2.2-1-ros2go1.tar.gz
-    version: web_video_server-0.2.2-1-ros2go1
+    uri: https://github.com/tianbot/web_video_server/archive/refs/tags/ros2go-noble-0.2.2-1.tar.gz
+    version: web_video_server-ros2go-noble-0.2.2-1
 - tar:
     local-name: webkit_dependency
     uri: https://github.com/ros-gbp/webkit_dependency-release/archive/release/noetic/webkit_dependency/1.1.2-1.tar.gz
