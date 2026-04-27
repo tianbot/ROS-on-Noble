@@ -12,6 +12,13 @@ traditional `ros-noetic-desktop-full` package name.
 - amd64 builds first
 - ROS Noetic desktop sources
 - Classic Gazebo 11 from the Noble ROS PPA
+- Bundled `ros-noetic-desktop-full` package with 307 discoverable ROS
+  packages, counted with `catkin_pkg.find_packages("src")` after source import.
+
+The imported source tree contains 324 `package.xml` files in total. The bundle
+count above excludes package manifests embedded in upstream test fixtures, such
+as `catkin/test/mock_resources`, because catkin does not treat those as build
+workspace packages.
 
 ## Add the Noble ROS PPA
 
