@@ -1,3 +1,10 @@
+ros-noetic-desktop-full (1.16.0-5) noble; urgency=medium
+
+  * Disable the apriltag Python wrapper during bundled builds so it does not
+    install into the Launchpad sbuild user's unavailable site-packages path.
+
+ -- Tianbot <dev@tianbot.com>  Mon, 27 Apr 2026 17:55:00 +0800
+
 ros-noetic-desktop-full (1.16.0-4) noble; urgency=medium
 
   * Promote ROS bundle build tools and external libraries to Build-Depends.

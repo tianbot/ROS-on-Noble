@@ -39,6 +39,7 @@ override_dh_auto_install:
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCATKIN_ENABLE_TESTING=OFF \
 		-DCMAKE_CXX_FLAGS=-DBOOST_TIMER_ENABLE_DEPRECATED \
+		-DBUILD_PYTHON_WRAPPER=OFF \
 		-DPYTHON_EXECUTABLE=/usr/bin/python3
 
 override_dh_builddeb:
